@@ -1,3 +1,66 @@
 {
-	"name": "HitCounters"
+	"name": "HitCounters2",
+	"author": [
+		"[mailto:alex@blueselene.com Alex]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:HitCounters2",
+	"descriptionmsg": "hitcounters2-desc",
+	"license-name": "GPL-3.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.42.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\HitCounters2": "includes/"
+	},
+	"MessagesDirs": {
+		"HitCounters2": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"HitCounters2Magic": "HitCounters2Magic.php"
+	},
+	"RestRoutes": [
+		{
+			"path": "/hitcounters2/v0/increment/{id}",
+			"method": "POST",
+			"class": "MediaWiki\\Extension\\HitCounters2\\Rest\\Handler\\RestIncrementCounter",
+			"services": [
+				"ConnectionProvider"
+			]
+		}
+	],
+	"HookHandlers": {
+		"default": {
+			"class": "MediaWiki\\Extension\\HitCounters2\\Hooks"
+		},
+		"Installer": {
+			"class": "MediaWiki\\Extension\\HitCounters2\\Installer"
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": {
+			"handler": "default"
+		},
+		"GetMagicVariableIDs": {
+			"handler": "default"
+		},
+		"LoadExtensionSchemaUpdates": {
+			"handler": "Installer"
+		}
+	},
+	"ResourceModules": {
+		"ext.hitcounters2.incrementcounter": {
+			"scripts": "ext.hitcounters2.incrementcounter.js",
+			"targets": [ "desktop", "mobile" ],
+			"dependencies": [
+				"mediawiki.api"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "HitCounters2/modules"
+	}
 }
