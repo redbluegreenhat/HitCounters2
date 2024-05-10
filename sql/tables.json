@@ -7,14 +7,23 @@
 				"name": "pageid",
 				"comment": "id of the page",
 				"type": "bigint",
-				"options": { "notnull": true }
+				"options": { "notnull": true, "unsigned": true }
 			},
 			{
 				"name": "hits",
 				"comment": "number of hits to the page",
 				"type": "bigint",
-				"options": { "notnull": true }
+				"options": { "notnull": true, "unsigned": true }
 			}
-		]
+		],
+		"indexes": [
+			{
+				"name": "pageid",
+				"comment": "",
+				"columns": [ "pageid" ],
+				"unique": false
+			}
+		],
+		"pk": [ "pageid" ]
 	}
 ]
