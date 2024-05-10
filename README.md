@@ -1,6 +1,6 @@
 ## HitCounters2
 
-This is an alternative approach to the idea of the [HitCounters](https://www.mediawiki.org/wiki/Extension:HitCounters) extension-
+This is an alternative approach to the idea of the [HitCounters](https://www.mediawiki.org/wiki/Extension:HitCounters) extension.
 
 Instead of using deferred updates, it embeds some JavaScript code to every page that calls a REST endpoint provided by this extension. This approach has several advantages over the original HitCounters:
 
