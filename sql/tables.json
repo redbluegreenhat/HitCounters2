@@ -1,0 +1,20 @@
+[
+	{
+		"name": "hitcounters2_hitcounter",
+		"comment": "Table tracking page IDs and the number of hits on each",
+		"columns": [
+			{
+				"name": "pageid",
+				"comment": "id of the page",
+				"type": "bigint",
+				"options": { "notnull": true }
+			},
+			{
+				"name": "hits",
+				"comment": "number of hits to the page",
+				"type": "bigint",
+				"options": { "notnull": true }
+			}
+		]
+	}
+]
