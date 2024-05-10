@@ -1,8 +1,8 @@
 ## HitCounters2
 
-This is an alternative approach to the concept of [HitCounters](https://www.mediawiki.org/wiki/Extension:HitCounters)
+This is an alternative approach to the idea of the [HitCounters](https://www.mediawiki.org/wiki/Extension:HitCounters) extension-
 
-Instead of using deferred updates, it embeds some JavaScript code using to every page that calls a REST endpoint provided by this extension. This approach has several advantages over the original HitCounters:
+Instead of using deferred updates, it embeds some JavaScript code to every page that calls a REST endpoint provided by this extension. This approach has several advantages over the original HitCounters:
 
  - Works with caching HTTP proxies.
  - Potentially more scalable. You could even have a dedicated MediaWiki server just to process HitCounters2 updates if you configure your reverse proxy for it.
