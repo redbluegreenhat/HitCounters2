@@ -45,7 +45,7 @@ class RestIncrementCounter extends SimpleHandler {
 
 		$dbw->newUpdateQueryBuilder()
 			->update( 'hc2_hitcounter' )
-			->set( ['hc_hits=hc_hits+1' ] )
+			->set( [ 'hc_hits=hc_hits+1' ] )
 			->where( [ 'hc_pageid' => $pageID ] )
 			->caller( __METHOD__ )->execute();
 
