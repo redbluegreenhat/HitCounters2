@@ -33,8 +33,8 @@ class RestIncrementCounter extends SimpleHandler {
 		if ( $pageID === 0 ) {
 			return $this->getResponseFactory()->createLocalizedHttpError( 400, new MessageValue( 'hitcounters2-rest-pageidzero' ) );
 		}
-		if ( $pageID != $body['id'] ) {
-			return $this->getResponseFactory()->createLocalizedHttpError( 400, new MessageValue( 'hitcounters2-rest-pageidmismatch' ) );
+		if ( !$body['increment'] ) {
+			return $this->getResponseFactory()->createLocalizedHttpError( 400, new MessageValue( 'hitcounters2-rest-incrementnottrue' ) );
 		}
 		if ( !$this->wikiPageFactory->newFromId( $pageID ) ) {
 			return $this->getResponseFactory()->createLocalizedHttpError( 400, new MessageValue( 'hitcounters2-rest-pagedoesnotexist' ) );
@@ -91,9 +91,9 @@ class RestIncrementCounter extends SimpleHandler {
 			return new UnsupportedContentTypeBodyValidator( $contentType );
 		}
 		return new JsonBodyValidator( [
-			'id' => [
+			'increment' => [
 				self::PARAM_SOURCE => 'body',
-				ParamValidator::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_TYPE => 'boolean',
 				ParamValidator::PARAM_REQUIRED => true,
 			],
 		] );
