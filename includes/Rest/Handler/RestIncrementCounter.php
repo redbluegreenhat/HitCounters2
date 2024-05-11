@@ -33,7 +33,7 @@ class RestIncrementCounter extends SimpleHandler {
 		if ( $pageID === 0 ) {
 			return $this->getResponseFactory()->createLocalizedHttpError( 400, new MessageValue( 'hitcounters2-rest-pageidzero' ) );
 		}
-		if ( $pageID !== $body['id'] ) {
+		if ( $pageID != $body['id'] ) {
 			return $this->getResponseFactory()->createLocalizedHttpError( 400, new MessageValue( 'hitcounters2-rest-pageidmismatch' ) );
 		}
 		if ( !$this->wikiPageFactory->newFromId( $pageID ) ) {
@@ -78,12 +78,12 @@ class RestIncrementCounter extends SimpleHandler {
 
 	public function getParamSettings() {
 		return [
-				'id' => [
-					self::PARAM_SOURCE => 'path',
-					ParamValidator::PARAM_TYPE => 'integer',
-					ParamValidator::PARAM_REQUIRED => true,
-				],
-			];
+			'id' => [
+				self::PARAM_SOURCE => 'path',
+				ParamValidator::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_REQUIRED => true,
+			],
+		];
 	}
 
 	public function getBodyValidator( $contentType ) {
