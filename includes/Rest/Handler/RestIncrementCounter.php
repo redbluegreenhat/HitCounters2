@@ -9,7 +9,6 @@ use MediaWiki\Rest\Validator\UnsupportedContentTypeBodyValidator;
 use Wikimedia\MessageValue\MessageValue;
 use Wikimedia\ParamValidator\ParamValidator;
 use Wikimedia\Rdbms\IConnectionProvider;
-use Wikimedia\Rdbms\UpdateQueryBuilder;
 
 /*
  * Increments the hit counter for the specified page ID
