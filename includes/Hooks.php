@@ -10,7 +10,7 @@ class Hooks implements
 	GetMagicVariableIDsHook
 {
 	public function onBeforePageDisplay( $out, $skin ): void {
-		$out->addModules( 'ext.hitcounters2.incrementcounter.js' );
+		$out->addModules( 'ext.hitcounters2.incrementcounter' );
 	}
 	public function onGetMagicVariableIDs( &$variableIDs ) {
 		$variableIDs[] = 'numberofhits';
