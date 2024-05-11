@@ -8,7 +8,7 @@ class Installer implements LoadExtensionSchemaUpdatesHook {
 
 	public function onLoadExtensionSchemaUpdates( $updater ) {
 		$dbType = $updater->getDB()->getType();
-		$dir = __DIR__ . '/sql';
+		$dir = __DIR__ . '/../sql';
 
 		$updater->addExtensionTable( 'hitcounters2_hitcounter', "$dir/$dbType/tables-generated.sql" );
 	}
