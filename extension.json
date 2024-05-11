@@ -27,7 +27,8 @@
 			"method": "POST",
 			"class": "MediaWiki\\Extension\\HitCounters2\\Rest\\Handler\\RestIncrementCounter",
 			"services": [
-				"ConnectionProvider"
+				"ConnectionProvider",
+				"WikiPageFactory"
 			]
 		}
 	],
