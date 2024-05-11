@@ -12,7 +12,7 @@ class Hooks implements
 	public function onBeforePageDisplay( $out, $skin ): void {
 		$out->addModules( 'ext.hitcounters2.incrementcounter.js' );
 	}
-	public function getMagicVariableIDsHook( &$variableIDs ) {
+	public function onGetMagicVariableIDs( &$variableIDs ) {
 		$variableIDs[] = 'numberofhits';
 	}
 }
