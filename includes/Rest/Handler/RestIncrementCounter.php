@@ -77,12 +77,13 @@ class RestIncrementCounter extends SimpleHandler {
 	}
 
 	public function getParamSettings() {
-		return 'id' => [
-				self::PARAM_SOURCE => 'path',
-				ParamValidator::PARAM_TYPE => 'integer',
-				ParamValidator::PARAM_REQUIRED => true,
-			],
-		];
+		return [
+				'id' => [
+					self::PARAM_SOURCE => 'path',
+					ParamValidator::PARAM_TYPE => 'integer',
+					ParamValidator::PARAM_REQUIRED => true,
+				],
+			];
 	}
 
 	public function getBodyValidator( $contentType ) {
