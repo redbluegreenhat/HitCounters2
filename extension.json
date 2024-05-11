@@ -11,7 +11,7 @@
 		"MediaWiki": ">= 1.42.0"
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\HitCounters2": "includes/"
+		"MediaWiki\\Extension\\HitCounters2\\": "includes/"
 	},
 	"MessagesDirs": {
 		"HitCounters2": [
