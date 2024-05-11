@@ -62,5 +62,6 @@
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
 		"remoteExtPath": "HitCounters2/modules"
-	}
+	},
+	"manifest_version": 2
 }
