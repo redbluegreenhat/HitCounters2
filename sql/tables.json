@@ -1,16 +1,16 @@
 [
 	{
-		"name": "hitcounters2_hitcounter",
+		"name": "hc2_hitcounter",
 		"comment": "Table tracking page IDs and the number of hits on each",
 		"columns": [
 			{
-				"name": "pageid",
+				"name": "hc_pageid",
 				"comment": "id of the page",
 				"type": "bigint",
 				"options": { "notnull": true, "unsigned": true }
 			},
 			{
-				"name": "hits",
+				"name": "hc_hits",
 				"comment": "number of hits to the page",
 				"type": "bigint",
 				"options": { "notnull": true, "unsigned": true }
@@ -18,12 +18,12 @@
 		],
 		"indexes": [
 			{
-				"name": "pageid",
+				"name": "hc_pageid",
 				"comment": "",
-				"columns": [ "pageid" ],
+				"columns": [ "hc_pageid" ],
 				"unique": false
 			}
 		],
-		"pk": [ "pageid" ]
+		"pk": [ "hc_pageid" ]
 	}
 ]

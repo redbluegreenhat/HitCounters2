@@ -2,9 +2,9 @@
 -- Source: HitCounters2/sql/tables.json
 -- Do not modify this file directly.
 -- See https://www.mediawiki.org/wiki/Manual:Schema_changes
-CREATE TABLE /*_*/hitcounters2_hitcounter (
-  pageid BIGINT UNSIGNED NOT NULL,
-  hits BIGINT UNSIGNED NOT NULL,
-  INDEX pageid (pageid),
-  PRIMARY KEY(pageid)
+CREATE TABLE /*_*/hc2_hitcounter (
+  hc_pageid BIGINT UNSIGNED NOT NULL,
+  hc_hits BIGINT UNSIGNED NOT NULL,
+  INDEX hc_pageid (hc_pageid),
+  PRIMARY KEY(hc_pageid)
 ) /*$wgDBTableOptions*/;

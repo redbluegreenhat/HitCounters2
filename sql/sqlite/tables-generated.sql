@@ -2,10 +2,10 @@
 -- Source: HitCounters2/sql/tables.json
 -- Do not modify this file directly.
 -- See https://www.mediawiki.org/wiki/Manual:Schema_changes
-CREATE TABLE /*_*/hitcounters2_hitcounter (
-  pageid BIGINT UNSIGNED NOT NULL,
-  hits BIGINT UNSIGNED NOT NULL,
-  PRIMARY KEY(pageid)
+CREATE TABLE /*_*/hc2_hitcounter (
+  hc_pageid BIGINT UNSIGNED NOT NULL,
+  hc_hits BIGINT UNSIGNED NOT NULL,
+  PRIMARY KEY(hc_pageid)
 );
 
-CREATE INDEX pageid ON /*_*/hitcounters2_hitcounter (pageid);
+CREATE INDEX hc_pageid ON /*_*/hc2_hitcounter (hc_pageid);
