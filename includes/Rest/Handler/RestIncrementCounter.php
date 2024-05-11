@@ -58,6 +58,8 @@ class RestIncrementCounter extends SimpleHandler {
 				] )
 				->caller( __METHOD__ )->execute();
 		}
+
+		return $this->getResponseFactory()->createNoContent();
 	}
 
 	public function needsWriteAccess() {
