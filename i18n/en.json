@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alex"
+		]
+	},
+	"hitcounters2-rest-incrementnottrue": "The 'increment' parameter in the POST data is not true",
+	"hitcounters2-rest-pagedoesnotexist": "Can't increment the hit counter for pages that do not exist",
+	"hitcounters2-rest-pageidzero": "Can't increment the hit counter for pages with page id zero"
+}

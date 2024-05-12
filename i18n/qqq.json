@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alex"
+		]
+	},
+	"hitcounters2-rest-incrementnottrue": "Resturned by the REST API when the 'increment' parameter in the body of the POST data is not true",
+	"hitcounters2-rest-pagedoesnotexist": "Returned by the REST API when attempting to increment the hit counter of a page that does not exist",
+	"hitcounters2-rest-pageidzero": "Returned by the REST API when attempting to increment the hit counter for a page with id zero"
+}
