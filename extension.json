@@ -13,6 +13,9 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\HitCounters2\\": "includes/"
 	},
+	"AvailableRights": [
+		"hitcounters2-resetcounter"
+	],
 	"MessagesDirs": {
 		"HitCounters2": [
 			"i18n"
@@ -69,6 +72,12 @@
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
 		"remoteExtPath": "HitCounters2/modules"
+	},
+	"SpecialPages": {
+		"class": "MediaWiki\\Extension\\HitCounters2\\Specials\\SpecialResetHitCounter",
+		"services": [
+			"ConnectionProvider"
+		]
 	},
 	"manifest_version": 2
 }
