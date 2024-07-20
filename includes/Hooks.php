@@ -9,7 +9,7 @@ use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Page\ProperPageIdentity;
 use MediaWiki\Page\Hook\PageDeleteCompleteHook;
 use MediaWiki\Permissions\Authority;
-use MediaWiki\Revision\RevisionRecord
+use MediaWiki\Revision\RevisionRecord;
 use Wikimedia\Rdbms\IConnectionProvider;
 
 class Hooks implements
