@@ -19,7 +19,7 @@
 	"LogTypes": [
 		"hitcounters2resethitcounter"
 	],
-	"LogActionHandlers": {
+	"LogActionsHandlers": {
 		"hitcounters2resethitcounter/*": "LogFormatter"
 	},
 	"MessagesDirs": {
