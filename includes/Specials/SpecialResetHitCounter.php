@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\HitCounters2\Specials;
 
 use ManualLogEntry;
 use MediaWiki\SpecialPage\FormSpecialPage;
+use MediaWiki\Title\Title;
 use Wikimedia\Rdbms\IConnectionProvider;
 
 class SpecialResetHitCounter extends FormSpecialPage {
