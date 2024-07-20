@@ -17,10 +17,10 @@
 		"hitcounters2-resetcounter"
 	],
 	"LogTypes": [
-		"hitcounters2-resethitcounter"
+		"hitcounters2resethitcounter"
 	],
 	"LogActionHandlers": {
-		"hitcounters2-resethitcounter/*": "LogFormatter"
+		"hitcounters2resethitcounter/*": "LogFormatter"
 	},
 	"MessagesDirs": {
 		"HitCounters2": [

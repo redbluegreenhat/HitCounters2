@@ -72,7 +72,7 @@ class SpecialResetHitCounter extends FormSpecialPage {
 			return [ 'hitcounters2-resethitcounter-pagenotintable' ];
 		}
 		$this->page = $formData['page'];
-		$logEntry = new ManualLogEntry( 'hitcounters2-resethitcounter', 'reset' );
+		$logEntry = new ManualLogEntry( 'hitcounters2resethitcounter', 'reset' );
 		$logEntry->setPerformer( $this->getUser() );
 		$logEntry->setTarget( $page );
 		$logEntry->setComment( $formData['reason'] );
