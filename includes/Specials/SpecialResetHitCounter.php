@@ -40,14 +40,14 @@ class SpecialResetHitCounter extends FormSpecialPage {
 			'page' => [
 				'type' => 'title',
 				'default' => '',
-				'label-message' => 'hitcounters2-enterpage',
+				'label-message' => 'hitcounters2-resethitcounter-enterpage',
 				'name' => 'user',
 				'required' => true,
 			],
 			'reason' => [
 				'type' => 'text',
 				'default' => '',
-				'label-message' => 'hitcounters2-enterreason',
+				'label-message' => 'hitcounters2-resethitcounter-enterreason',
 				'name' => 'reason',
 				'required' => true,
 			],

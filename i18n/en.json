@@ -5,6 +5,8 @@
 		]
 	},
 	"hitcounters2-desc": "An extension to count the number of 'hits' (visits) to a specific page",
+	"hitcounters2-resethitcounter-enterpage": "Enter the page you wish to reset the hit counter of",
+	"hitcounters2-resethitcounter-enterreason": "Enter the reason for resetting the hit counter",
 	"hitcounters2-resethitcounter-pageidzero": "Page does not exist",
 	"hitcounters2-resethitcounter-pagenotintable": "This page has not yet been recorded in this extension's database table",
 	"hitcounters2-resethitcounter-success": "Hit counter reset successfully for $1",
