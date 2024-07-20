@@ -16,6 +16,9 @@
 	"AvailableRights": [
 		"hitcounters2-resetcounter"
 	],
+	"LogTypes": [
+		"hitcounters2-resethitcounter"
+	],
 	"MessagesDirs": {
 		"HitCounters2": [
 			"i18n"
