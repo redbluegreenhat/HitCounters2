@@ -19,6 +19,9 @@
 	"LogTypes": [
 		"hitcounters2-resethitcounter"
 	],
+	"LogActionHandlers": {
+		"hitcounters2-resethitcounter/*": "LogFormatter"
+	},
 	"MessagesDirs": {
 		"HitCounters2": [
 			"i18n"
