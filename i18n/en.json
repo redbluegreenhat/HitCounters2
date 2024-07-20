@@ -14,6 +14,8 @@
 	"hitcounters2-rest-pagedoesnotexist": "Can't increment the hit counter for pages that do not exist",
 	"hitcounters2-rest-pageidzero": "Can't increment the hit counter for pages with page id zero",
 	"log-name-hitcounters2resethitcounter": "Hit counter reset log",
+	"log-description-hitcounters2resethitcounter": "A log for tracking hit counter resets",
+	"logentry-hitcounters2resethitcounter-reset": "$1 {{GENDER:$2|reset}} the hit counter for $3",
 	"resethitcounter": "Reset hit counter",
 	"right-hitcounters2-resetcounter": "Reset hit counter for any page",
 	"action-hitcounters2-resetcounter": "reset hit counter for any page"
