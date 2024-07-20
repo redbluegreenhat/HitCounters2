@@ -75,7 +75,7 @@ class SpecialResetHitCounter extends FormSpecialPage {
 		$logEntry = new ManualLogEntry( 'hitcounters2-resethitcounter', 'reset' );
 		$logEntry->setPerformer( $this->getUser() );
 		$logEntry->setTarget( $page );
-		$logEntry->setReason( $formData['reason'] );
+		$logEntry->setComment( $formData['reason'] );
 		$logEntryID = $logEntry->insert();
 		$logEntry->publish( $logEntryID );
 		return true;
