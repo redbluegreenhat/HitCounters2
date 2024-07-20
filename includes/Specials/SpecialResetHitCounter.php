@@ -56,7 +56,8 @@ class SpecialResetHitCounter extends FormSpecialPage {
 	}
 
 	public function onSubmit( array $formData ) {
-		$pageID = Title::newFromTextThrow( $formData['page'] )->getId();
+		$page = Title::newFromTextThrow( $formData['page'] );
+		$pageID = $page->getId();
 		if ( $pageID === 0 ) {
 			return [ 'hitcounters2-resethitcounter-pageidzero' ];
 		}
@@ -71,6 +72,11 @@ class SpecialResetHitCounter extends FormSpecialPage {
 			return [ 'hitcounters2-resethitcounter-pagenotintable' ];
 		}
 		$this->page = $formData['page'];
+		$logEntry = new ManualLogEntry( 'hitcounters2-resethitcounter' );
+		$logEntry->setPerformer( $this->getUser() );
+		$logEntry->setTarget( $page );
+		$logEntryID = $logEntry->insert();
+		$logEntry->publish( $logEntryID );
 		return true;
 	}
 
