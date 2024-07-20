@@ -16,7 +16,7 @@ class Hooks implements
 	BeforePageDisplayHook,
 	GetMagicVariableIDsHook,
 	PageDeleteCompleteHook,
-	ParserGetVariableValueSwitchHook,
+	ParserGetVariableValueSwitchHook
 {
 
 	private $connectionProvider;
