@@ -25,7 +25,7 @@ class SpecialResetHitCounter extends FormSpecialPage {
 	}
 
 	public function doesWrites() {
-		return 'true';
+		return true;
 	}
 
 	public function getDisplayFormat() {
