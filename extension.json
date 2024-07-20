@@ -34,7 +34,10 @@
 	],
 	"HookHandlers": {
 		"default": {
-			"class": "MediaWiki\\Extension\\HitCounters2\\Hooks"
+			"class": "MediaWiki\\Extension\\HitCounters2\\Hooks",
+			"services": [
+				"ConnectionProvider"
+			]
 		},
 		"Installer": {
 			"class": "MediaWiki\\Extension\\HitCounters2\\Installer"

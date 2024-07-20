@@ -5,12 +5,21 @@ namespace MediaWiki\Extension\HitCounters2;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\GetMagicVariableIDsHook;
 use MediaWiki\Hook\ParserGetVariableValueSwitchHook;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 class Hooks implements
 	BeforePageDisplayHook,
 	GetMagicVariableIDsHook,
 	ParserGetVariableValueSwitchHook
 {
+
+	private $connectionProvider;
+
+	public function __construct(
+		IConnectionProvider $connectionProvider
+	) {
+		$this->connectionProvider = $connectionProvider;
+	}
 	public function onBeforePageDisplay( $out, $skin ): void {
 		$out->addModules( 'ext.hitcounters2.incrementcounter' );
 	}
