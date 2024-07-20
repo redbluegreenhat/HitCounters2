@@ -50,7 +50,7 @@
 		"LoadExtensionSchemaUpdates": {
 			"handler": "Installer"
 		},
-		"ParserGetVariableSwitch": {
+		"ParserGetVariableValueSwitch": {
 			"handler": "default"
 		}
 	},
