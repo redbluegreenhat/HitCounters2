@@ -49,6 +49,9 @@
 		},
 		"LoadExtensionSchemaUpdates": {
 			"handler": "Installer"
+		},
+		"ParserGetVariableSwitch": {
+			"handler": "default"
 		}
 	},
 	"ResourceModules": {
