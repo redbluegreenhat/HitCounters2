@@ -74,10 +74,12 @@
 		"remoteExtPath": "HitCounters2/modules"
 	},
 	"SpecialPages": {
-		"class": "MediaWiki\\Extension\\HitCounters2\\Specials\\SpecialResetHitCounter",
-		"services": [
-			"ConnectionProvider"
-		]
+		"ResetHitCounter": {
+			"class": "MediaWiki\\Extension\\HitCounters2\\Specials\\SpecialResetHitCounter",
+			"services": [
+				"ConnectionProvider"
+			]
+		}
 	},
 	"manifest_version": 2
 }
