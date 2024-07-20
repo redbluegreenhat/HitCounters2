@@ -19,7 +19,7 @@ class Hooks implements
 		$variableIDs[] = 'numberofhits';
 	}
 
-	public function onParserGetVariableSwitch( $parser, &$variableCache, $magicWordId, &$ret, $frame ) {
+	public function onParserGetVariableValueSwitch( $parser, &$variableCache, $magicWordId, &$ret, $frame ) {
 		if ( $magicWordId === 'numberofhits' ) {
 			$dbr = $this->connectionProvider->getReplicaDatabase();
 			$pageID = $frame->getTitle()->getId();
