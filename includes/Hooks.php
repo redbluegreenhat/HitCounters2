@@ -20,6 +20,7 @@ class Hooks implements
 	) {
 		$this->connectionProvider = $connectionProvider;
 	}
+
 	public function onBeforePageDisplay( $out, $skin ): void {
 		$out->addModules( 'ext.hitcounters2.incrementcounter' );
 	}
