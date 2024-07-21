@@ -1,6 +1,9 @@
 $( function () {
 	var restApi = new mw.Rest();
-	restApi.post( '/hitcounters2/v0/increment/' + mw.config.get( 'wgArticleId' ), {
-		increment: true
-	} );
+	var pageID = mw.config.get( 'wgArticleId' );
+	if ( pageID > 0 ) {
+		restApi.post( '/hitcounters2/v0/increment/' + pageID, {
+			increment: true
+		} );
+	}
 } )
