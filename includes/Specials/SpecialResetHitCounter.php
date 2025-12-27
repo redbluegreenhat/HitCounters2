@@ -7,16 +7,13 @@ use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Title\Title;
 use Wikimedia\Rdbms\IConnectionProvider;
 
-class SpecialResetHitCounter extends FormSpecialPage {
-
-	private $connectionProvider;
+final class SpecialResetHitCounter extends FormSpecialPage {
 
 	private $page;
 
 	public function __construct(
-		IConnectionProvider $connectionProvider
+		private IConnectionProvider $connectionProvider
 	) {
-		$this->connectionProvider = $connectionProvider;
 		parent::__construct( 'ResetHitCounter', 'hitcounters2-resetcounter' );
 	}
 

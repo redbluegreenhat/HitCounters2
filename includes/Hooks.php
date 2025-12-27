@@ -12,20 +12,16 @@ use MediaWiki\Permissions\Authority;
 use MediaWiki\Revision\RevisionRecord;
 use Wikimedia\Rdbms\IConnectionProvider;
 
-class Hooks implements
+final class Hooks implements
 	BeforePageDisplayHook,
 	GetMagicVariableIDsHook,
 	PageDeleteCompleteHook,
 	ParserGetVariableValueSwitchHook
 {
 
-	private $connectionProvider;
-
 	public function __construct(
-		IConnectionProvider $connectionProvider
-	) {
-		$this->connectionProvider = $connectionProvider;
-	}
+		private IConnectionProvider $connectionProvider
+	) {}
 
 	public function onBeforePageDisplay( $out, $skin ): void {
 		$out->addModules( 'ext.hitcounters2.incrementcounter' );
