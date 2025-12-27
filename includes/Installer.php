@@ -4,7 +4,7 @@ namespace MediaWiki\Extension\HitCounters2;
 
 use MediaWiki\Installer\Hook\LoadExtensionSchemaUpdatesHook;
 
-class Installer implements LoadExtensionSchemaUpdatesHook {
+final class Installer implements LoadExtensionSchemaUpdatesHook {
 
 	public function onLoadExtensionSchemaUpdates( $updater ) {
 		$dbType = $updater->getDB()->getType();

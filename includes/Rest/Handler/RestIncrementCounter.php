@@ -10,23 +10,16 @@ use Wikimedia\Message\MessageValue;
 use Wikimedia\ParamValidator\ParamValidator;
 use Wikimedia\Rdbms\IConnectionProvider;
 
-/*
+/**
  * Increments the hit counter for the specified page ID
  * POST /hitcounters2/v0/increment/{id}
  */
-class RestIncrementCounter extends SimpleHandler {
-
-	private $connectionProvider;
-
-	private $wikiPageFactory;
+final class RestIncrementCounter extends SimpleHandler {
 
 	public function __construct(
-		IConnectionProvider $connectionProvider,
-		WikiPageFactory $wikiPageFactory
-	) {
-		$this->connectionProvider = $connectionProvider;
-		$this->wikiPageFactory = $wikiPageFactory;
-	}
+		private IConnectionProvider $connectionProvider,
+		private WikiPageFactory $wikiPageFactory
+	) {}
 
 	public function run( int $pageID ) {
 		$body = $this->getValidatedBody();
